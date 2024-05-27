@@ -1,9 +1,9 @@
-const navBarList = document.querySelector(".navbar__list");
+const navBar = document.querySelector(".navbar");
 const navBarItems = document.querySelectorAll(".navbar__item")
-const navBarIcon = document.querySelector(".navbar__icon");
+const navBarLogo = document.querySelector(".navbar__logo");
 
-navBarIcon.addEventListener("click", () => {
-    navBarList.classList.toggle("navbar__list--active");
+navBarLogo.addEventListener("click", () => {
+    navBar.classList.toggle("navbar--active");
     
     navBarItems.forEach(element => {
         element.classList.toggle("navbar__item--active");
