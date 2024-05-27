@@ -45,7 +45,7 @@
     height: 50px;
     margin-left: -13px;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
 }
 
 .navbar__logo--active {
