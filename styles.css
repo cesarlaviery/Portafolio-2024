@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 
-.navbar__logo:hover {
+.navbar__logo--active {
     animation: rotar 1.5s alternate;
 }
 
