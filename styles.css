@@ -9,10 +9,14 @@
 
 :root {
 
-    /* Fuentes */
+    /* Fonts */
 
     --Noto-sans: "Noto Sans", sans-serif;
     --Libre-baskerville: "Libre Baskerville", serif;
+
+    /* Colors */
+    --Black: black;
+    --White: white;
 
 }
 
@@ -24,11 +28,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: black;
-    color: white;
+    background-color: var(--Black);
+    color: var(--White);
     position: fixed;
     clip-path: circle(30px at 0% 50%);
-    transition: 1s ease;
+    transition: 1s;
 }
 
 .navbar--active {
@@ -49,10 +53,10 @@
 }
 
 .navbar__logo--active {
-    animation: rotar 1.5s alternate;
+    animation: rotate 1.5s alternate;
 }
 
-@keyframes rotar {
+@keyframes rotate {
 
     0% {
         transform: rotate(0deg);
@@ -107,10 +111,10 @@
 }
 
 .navbar__item:hover {
-    background-color: white;
+    background-color: var(--White);
 
     .navbar__item-link {
-        color: black;
+        color: var(--Black);
     }
 }
 
@@ -131,10 +135,36 @@
 
 .navbar__item-link {
     text-decoration: none;
-    color: white;
+    color: var(--White);
 }
 
+/* Start */
+
+.start {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-family: var(--Libre-baskerville);
+}
+
+.start__title {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.start__paragraph {
+    font-size: .8rem;
+}
+
+
 @media (min-width:768px) {
+
+    /* NavBar */
 
     .navbar {
         height: 80px;
@@ -167,7 +197,7 @@
 
     .navbar__logo-container:hover {
         width: 183px;
-        background-color: white;
+        background-color: var(--White);
 
         .navbar__logo {
             left: -25%;
@@ -176,7 +206,7 @@
         .navbar__logo-name {
             left: 35%;
             opacity: 1;
-            color: black;
+            color: var(--Black);
         }
     }
 
