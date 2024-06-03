@@ -15,12 +15,24 @@
     --Libre-baskerville: "Libre Baskerville", serif;
 
     /* Colors */
-    --Black: black;
-    --White: white;
+
+    --Black: rgb(0, 0, 0);
+    --White: rgb(255, 255, 255);
 
 }
 
 /* Navbar */
+
+body {
+    background-color: black;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
 
 .navbar {
     width: 100%;
@@ -28,8 +40,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--Black);
-    color: var(--White);
+    background-color: var(--White);
+    color: var(--Black);
     position: fixed;
     clip-path: circle(30px at 0% 50%);
     transition: 1s;
@@ -111,10 +123,10 @@
 }
 
 .navbar__item:hover {
-    background-color: var(--White);
+    background-color: var(--Black);
 
     .navbar__item-link {
-        color: var(--Black);
+        color: var(--White);
     }
 }
 
@@ -135,21 +147,22 @@
 
 .navbar__item-link {
     text-decoration: none;
-    color: var(--White);
+    color: var(--Black);
 }
 
 /* Start */
 
 .start {
     width: 80%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 100px 0;
-    font-family: var(--Libre-baskerville);
+    font-family: var(--Noto-sans);
+    color: var(--White);
 }
 
 .start__title {
@@ -161,6 +174,15 @@
     font-size: .8rem;
 }
 
+.languages-logo {
+    display: flex;
+    gap: 10px;
+    padding: 9px;
+}
+
+.languages-logo__img {
+    height: 60px;
+}
 
 @media (min-width:768px) {
 
@@ -197,7 +219,7 @@
 
     .navbar__logo-container:hover {
         width: 183px;
-        background-color: var(--White);
+        background-color: var(--Black);
 
         .navbar__logo {
             left: -25%;
@@ -206,7 +228,7 @@
         .navbar__logo-name {
             left: 35%;
             opacity: 1;
-            color: var(--Black);
+            color: var(--White);
         }
     }
 
@@ -239,5 +261,28 @@
 
     .navbar__item--active {
         animation: none;
+    }
+
+    .start {
+        width: 50%;
+        height: 650px;
+    }
+
+    .start__title {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+    
+    .start__paragraph {
+        font-size: 1rem;
+    }
+
+    .languages-logo {
+        gap: 20px;
+        padding: 15px 0;
+    }
+    
+    .languages-logo__img {
+        height: 130px;
     }
 }

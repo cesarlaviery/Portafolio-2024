@@ -11,6 +11,12 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/9fe5c1ddcf.js" crossorigin="anonymous"></script>
 
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <!-- JS -->
     <script defer src="script.js"></script>
 
@@ -19,12 +25,15 @@
 
 <body>
 
+    <!-- Particles.js Div -->
+    <div id="particles-js"></div>
+
     <!-- Nabvar -->
 
     <header class="header">
         <nav class="navbar">
             <div class="navbar__logo-container">
-                <img class="navbar__logo" src="img/Logo.png" alt="Logo">
+                <img class="navbar__logo" src="assets/img/Logo.png" alt="Logo">
                 <p class="navbar__logo-name">DevCesar</p>
             </div>
             <ul class="navbar__list">
@@ -42,10 +51,19 @@
         <!-- Start -->
 
         <section class="start">
-            <h1 class="start__title">Bienvenido.</h1>
-            <p class="start__paragraph">Soy Cesar Laviery, aspirante a desarrollador web con pasión por crear sitios web que sorprendan y
-                cautiven a sus usuarios.</p>
+            <h1 class="start__title"><span class="typed"></span></h1>
+            <p class="start__paragraph">Soy Cesar Laviery, un aspirante a desarrollador web con una gran pasión por
+                crear sitios web
+                que sorprendan y
+                cautiven a sus usuarios.
+            </p>
+            <figure class="languages-logo">
+                <img class="languages-logo__img" src="assets/svg/html5-logo.svg" alt="HTML5 - Logo">
+                <img class="languages-logo__img" src="assets/svg/css-logo.svg" alt="CSS - Logo">
+                <img class="languages-logo__img" src="assets/svg/js-logo.svg" alt="JS - Logo">
+            </figure>
         </section>
+
 
     </main>
 
