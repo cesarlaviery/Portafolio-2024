@@ -176,8 +176,8 @@ body {
     font-size: .8rem;
 }
 
-.start__sub-paragraph {
-    display: none;
+.start__paragraph-en {
+    opacity: 0;
 }
 
 .languages-logo {
@@ -272,7 +272,7 @@ body {
 
     .start {
         display: grid;
-        grid-template-columns: 1fr 500px;
+        grid-template-columns: 1fr minmax(100px, 500px);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
         "title logos"
@@ -295,6 +295,7 @@ body {
         align-self: self-start;
         text-align: start;
         font-size: 1rem;
+        min-width: 526px;
     }
 
     .start__paragraph::after{
