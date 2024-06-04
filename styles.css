@@ -158,10 +158,11 @@ body {
     height: 350px;
     width: 80%;
     display: grid;
-    grid-template-rows: 1fr minmax(max-content, 75px) 1fr;
+    grid-template-rows: 1fr max-content max-content 1fr;
     grid-template-areas:
         "title"
         "paragraph"
+        "icon"
         "logos";
     text-align: center;
     margin: 0 auto;
@@ -199,8 +200,7 @@ body {
 
 .start-icon {
     cursor: pointer;
-    grid-area: paragraph;
-    align-self: flex-end;
+    grid-area: icon;
 }
 
 .languages-logo {
