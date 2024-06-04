@@ -155,32 +155,58 @@ body {
 /* Start */
 
 .start {
+    height: 350px;
     width: 80%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr minmax(max-content, 75px) 1fr;
+    grid-template-areas:
+        "title"
+        "paragraph"
+        "logos";
     text-align: center;
     margin: 0 auto;
     font-family: var(--Noto-sans);
     color: var(--White);
 }
 
+.start__paragraph-opacity {
+
+    .start__paragraph-es {
+        opacity: 0;
+    }
+
+    .start__paragraph-en {
+        opacity: 1;
+    }
+}
+
 .start__title {
+    grid-area: title;
+    align-self: flex-end;
     font-size: 1.8rem;
     font-weight: 900;
 }
 
 .start__paragraph {
+    grid-area: paragraph;
     font-size: .8rem;
 }
 
 .start__paragraph-en {
+    grid-area: paragraph;
     opacity: 0;
 }
 
+.start-icon {
+    cursor: pointer;
+    grid-area: paragraph;
+    align-self: flex-end;
+}
+
 .languages-logo {
+    grid-area: logos;
+    align-self: flex-start;
+    justify-self: center;
     display: flex;
     gap: 10px;
     padding: 9px;
@@ -274,12 +300,11 @@ body {
         display: grid;
         grid-template-columns: 1fr minmax(100px, 500px);
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        "title logos"
-        "paragraph logos";
-        align-items: center;
+        grid-template-areas:
+            "title logos"
+            "paragraph logos";
         width: 90%;
-        margin-top: 150px;
+        height: 690px;
     }
 
     .start__title {
@@ -289,30 +314,37 @@ body {
         font-weight: 900;
         text-align: start;
     }
-    
+
     .start__paragraph {
         grid-area: paragraph;
         align-self: self-start;
         text-align: start;
         font-size: 1rem;
-        min-width: 526px;
+        min-width: 536px;
+    }
+
+    .start__paragraph-es::after {
+        content: "¡Actualmente me encuetro en constante aprendizaje y perfeccionamiento para convertirme en un experto en el campo!.";
+    }
+
+    .start__paragraph-en::after {
+        content: "I am currently in constant learning and improvement to become an expert in the field!.";
     }
 
     .start-icon {
-        grid-area: paragraph;
-    }
-
-    .start__paragraph::after{
-        content: "¡Actualmente me encuetro en constante aprendizaje y perfeccionamiento para convertirme en un experto en el campo!.";
+        grid-area: title;
+        justify-self: flex-end;
+        align-self: flex-end;
     }
 
     .languages-logo {
         grid-area: logos;
+        align-self: center;
         flex-direction: column;
         gap: 20px;
         padding: 15px 0;
     }
-    
+
     .languages-logo__img {
         height: 130px;
     }
