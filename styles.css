@@ -298,6 +298,10 @@ body {
         min-width: 526px;
     }
 
+    .start-icon {
+        grid-area: paragraph;
+    }
+
     .start__paragraph::after{
         content: "¡Actualmente me encuetro en constante aprendizaje y perfeccionamiento para convertirme en un experto en el campo!.";
     }
